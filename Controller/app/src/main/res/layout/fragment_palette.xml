@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context=".PaletteFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
+
+        <View
+            android:id="@+id/color_view"
+            android:layout_width="840px"
+            android:layout_height="840px"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="2dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/Count_hsv_button"
+            android:layout_width="45dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorPrimary"
+            android:text="C: 255"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@color/design_default_color_background"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Blue_bar" />
+
+        <Button
+            android:id="@+id/Blue_button"
+            android:layout_width="45dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorPrimary"
+            android:text="B: 255"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@color/design_default_color_background"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Green_bar" />
+
+        <Button
+            android:id="@+id/Green_button"
+            android:layout_width="45dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorPrimary"
+            android:text="G: 255"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@color/design_default_color_background"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Red_bar" />
+
+        <Button
+            android:id="@+id/Red_button"
+            android:layout_width="45dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"
+            android:background="@color/colorPrimary"
+            android:text="R: 255"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@color/design_default_color_background"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/color_view" />
+
+        <Button
+            android:id="@+id/Add_hsv_button"
+            android:layout_width="45dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorPrimary"
+            android:text="A: 255"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@color/design_default_color_background"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Count_hsv_bar" />
+
+        <ImageView
+            android:id="@+id/wheel_image"
+            android:layout_width="636px"
+            android:layout_height="636px"
+            android:maxWidth="200dp"
+            android:maxHeight="200dp"
+            app:layout_constraintBottom_toBottomOf="@+id/frame"
+            app:layout_constraintEnd_toEndOf="@+id/frame"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/frame"
+            app:layout_constraintTop_toTopOf="@+id/frame"
+            app:layout_constraintVertical_bias="0.5"
+            app:srcCompat="@drawable/wheel_636" />
+
+        <ImageView
+            android:id="@+id/frame"
+            android:layout_width="850px"
+            android:layout_height="850px"
+            android:layout_marginTop="2dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/frame_850" />
+
+        <Button
+            android:id="@+id/Model_switch"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/colorPrimary"
+            android:text="RGB"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@color/design_default_color_background"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/color_view" />
+
+        <SeekBar
+            android:id="@+id/Red_bar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="8dp"
+            android:max="255"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/Red_button"
+            app:layout_constraintTop_toBottomOf="@+id/color_view" />
+
+        <SeekBar
+            android:id="@+id/Green_bar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="8dp"
+            android:max="255"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/Green_button"
+            app:layout_constraintTop_toBottomOf="@+id/Red_bar" />
+
+        <SeekBar
+            android:id="@+id/Blue_bar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="8dp"
+            android:max="255"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/Blue_button"
+            app:layout_constraintTop_toBottomOf="@+id/Green_bar" />
+
+        <SeekBar
+            android:id="@+id/Count_hsv_bar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="8dp"
+            android:max="255"
+            android:min="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/Count_hsv_button"
+            app:layout_constraintTop_toBottomOf="@+id/Blue_bar" />
+
+        <SeekBar
+            android:id="@+id/Add_hsv_bar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="8dp"
+            android:max="255"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/Add_hsv_button"
+            app:layout_constraintTop_toBottomOf="@+id/Count_hsv_bar" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="15dp"
+            android:layout_marginTop="2dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <Button
+                android:id="@+id/choose_1p"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/colorPrimary"
+                android:onClick="OnChoose"
+                android:stateListAnimator="@android:animator/fade_out"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@color/design_default_color_background" />
+
+            <Button
+                android:id="@+id/choose_2p"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/colorPrimary"
+                android:onClick="OnChoose"
+                android:stateListAnimator="@android:animator/fade_out"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@color/design_default_color_background" />
+
+            <Button
+                android:id="@+id/choose_3p"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/colorPrimary"
+                android:onClick="OnChoose"
+                android:stateListAnimator="@android:animator/fade_out"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@color/design_default_color_background" />
+
+            <Button
+                android:id="@+id/choose_4p"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/colorPrimary"
+                android:onClick="OnChoose"
+                android:stateListAnimator="@android:animator/fade_out"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@color/design_default_color_background" />
+
+            <Button
+                android:id="@+id/choose_5p"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/colorPrimary"
+                android:onClick="OnChoose"
+                android:stateListAnimator="@android:animator/fade_out"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@color/design_default_color_background" />
+
+            <Button
+                android:id="@+id/choose_6p"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/colorPrimary"
+                android:onClick="OnChoose"
+                android:stateListAnimator="@android:animator/fade_out"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@color/design_default_color_background" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+            <Button
+                android:id="@+id/select_1p"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="OnSelect"
+                android:background="@color/colorPrimary"
+                android:stateListAnimator="@android:animator/fade_out"
+                android:text="1"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@color/design_default_color_background" />
+
+            <Button
+                android:id="@+id/select_2p"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="OnSelect"
+                android:background="@color/colorPrimary"
+                android:stateListAnimator="@android:animator/fade_out"
+                android:text="2"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@color/design_default_color_background" />
+
+            <Button
+                android:id="@+id/select_3p"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="OnSelect"
+                android:background="@color/colorPrimary"
+                android:stateListAnimator="@android:animator/fade_out"
+                android:text="3"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@color/design_default_color_background" />
+
+            <Button
+                android:id="@+id/select_4p"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="OnSelect"
+                android:background="@color/colorPrimary"
+                android:stateListAnimator="@android:animator/fade_out"
+                android:text="4"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@color/design_default_color_background" />
+
+            <Button
+                android:id="@+id/select_5p"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="OnSelect"
+                android:background="@color/colorPrimary"
+                android:stateListAnimator="@android:animator/fade_out"
+                android:text="5"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@color/design_default_color_background" />
+
+            <Button
+                android:id="@+id/select_6p"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="OnSelect"
+                android:background="@color/colorPrimary"
+                android:stateListAnimator="@android:animator/fade_out"
+                android:text="6"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@color/design_default_color_background" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

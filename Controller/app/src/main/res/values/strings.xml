@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Controller</string>
+    <string name="title_home">Home</string>
+    <string name="template">Template</string>
+    <string name="palette">Palette</string>
+    <string name="n_255">255</string>
+    <string name="r">R:</string>
+    <string name="count">Count</string>
+    <string name="arrow1"><![CDATA[<<]]></string>
+    <string name="arrow2"><![CDATA[>>]]></string>
+    <string name="attach">Attach</string>
+    <string name="save">SAVE</string>
+    <string name="delete">DELETE</string>
+    <string name="open">OPEN</string>
+    <string name="name">Name</string>
+</resources>

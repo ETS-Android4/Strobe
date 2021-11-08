@@ -1,0 +1,621 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context=".HomeFragment">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:backgroundTintMode="add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
+        app:layout_constraintVertical_bias="1.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/Count_value"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorPrimary"
+                android:onClick="homeButtons"
+                android:text=""
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@color/design_default_color_background"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Count_txt" />
+
+            <Button
+                android:id="@+id/Count_add"
+                android:layout_width="40dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorPrimary"
+                android:onClick="homeButtons"
+                android:text="@string/arrow2"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@color/design_default_color_background"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@+id/Count_value"
+                app:layout_constraintTop_toBottomOf="@+id/Count_txt" />
+
+            <Button
+                android:id="@+id/Count_subtract"
+                android:layout_width="40dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="4dp"
+                android:background="@color/colorPrimary"
+                android:onClick="homeButtons"
+                android:text="@string/arrow1"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@color/design_default_color_background"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toStartOf="@+id/Count_value"
+                app:layout_constraintTop_toBottomOf="@+id/Count_txt" />
+
+            <Button
+                android:id="@+id/Count_attach"
+                android:layout_width="70dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="8dp"
+                android:background="@color/colorPrimary"
+                android:onClick="homeButtons"
+                android:text="@string/attach"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@color/design_default_color_background"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Count_txt" />
+
+            <Button
+                android:id="@+id/Delay_value"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorPrimary"
+                android:onClick="homeButtons"
+                android:text=""
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@color/design_default_color_background"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Delay_txt" />
+
+            <Button
+                android:id="@+id/Delay_add"
+                android:layout_width="40dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorPrimary"
+                android:onClick="homeButtons"
+                android:text="@string/arrow2"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@color/design_default_color_background"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@+id/Delay_value"
+                app:layout_constraintTop_toBottomOf="@+id/Delay_txt" />
+
+            <Button
+                android:id="@+id/Delay_subtract"
+                android:layout_width="40dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="4dp"
+                android:background="@color/colorPrimary"
+                android:onClick="homeButtons"
+                android:text="@string/arrow1"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@color/design_default_color_background"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toStartOf="@+id/Delay_value"
+                app:layout_constraintTop_toBottomOf="@+id/Delay_txt" />
+
+            <Button
+                android:id="@+id/Delay_attach"
+                android:layout_width="70dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="8dp"
+                android:background="@color/colorPrimary"
+                android:onClick="homeButtons"
+                android:text="@string/attach"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@color/design_default_color_background"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Delay_txt" />
+
+            <Button
+                android:id="@+id/Ontime_value"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorPrimary"
+                android:onClick="homeButtons"
+                android:text=""
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@color/design_default_color_background"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Ontime_txt" />
+
+            <Button
+                android:id="@+id/Ontime_add"
+                android:layout_width="40dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorPrimary"
+                android:onClick="homeButtons"
+                android:text="@string/arrow2"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@color/design_default_color_background"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@+id/Ontime_value"
+                app:layout_constraintTop_toBottomOf="@+id/Ontime_txt" />
+
+            <Button
+                android:id="@+id/Ontime_subtract"
+                android:layout_width="40dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="4dp"
+                android:background="@color/colorPrimary"
+                android:onClick="homeButtons"
+                android:text="@string/arrow1"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@color/design_default_color_background"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toStartOf="@+id/Ontime_value"
+                app:layout_constraintTop_toBottomOf="@+id/Ontime_txt" />
+
+            <Button
+                android:id="@+id/Ontime_attach"
+                android:layout_width="70dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="8dp"
+                android:background="@color/colorPrimary"
+                android:onClick="homeButtons"
+                android:text="@string/attach"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@color/design_default_color_background"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Ontime_txt" />
+
+            <Button
+                android:id="@+id/Global_value"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorPrimary"
+                android:onClick="homeButtons"
+                android:text=""
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@color/design_default_color_background"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Global_txt" />
+
+            <Button
+                android:id="@+id/Global_add"
+                android:layout_width="40dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorPrimary"
+                android:onClick="homeButtons"
+                android:text="@string/arrow2"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@color/design_default_color_background"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@+id/Global_value"
+                app:layout_constraintTop_toBottomOf="@+id/Global_txt" />
+
+            <Button
+                android:id="@+id/Global_subtract"
+                android:layout_width="40dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="4dp"
+                android:background="@color/colorPrimary"
+                android:onClick="homeButtons"
+                android:text="@string/arrow1"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@color/design_default_color_background"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toStartOf="@+id/Global_value"
+                app:layout_constraintTop_toBottomOf="@+id/Global_txt" />
+
+            <SeekBar
+                android:id="@+id/Count_bar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:max="100"
+                android:min="2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Count_value" />
+
+            <SeekBar
+                android:id="@+id/Delay_bar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:max="1632"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Delay_value" />
+
+            <SeekBar
+                android:id="@+id/Ontime_bar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:max="1632"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Ontime_value" />
+
+            <SeekBar
+                android:id="@+id/Global_bar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:max="640"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Global_value" />
+
+            <TextView
+                android:id="@+id/Count_txt"
+                android:layout_width="0dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="2dp"
+                android:background="@color/colorPrimary"
+                android:text="  Count"
+                android:textAlignment="gravity"
+                android:textColor="@android:color/background_light"
+                android:textIsSelectable="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/Delay_txt"
+                android:layout_width="0dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorPrimary"
+                android:text="  Delay"
+                android:textAlignment="gravity"
+                android:textColor="@android:color/background_light"
+                android:textIsSelectable="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Count_bar" />
+
+            <TextView
+                android:id="@+id/Ontime_txt"
+                android:layout_width="0dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorPrimary"
+                android:text="  ON Time"
+                android:textAlignment="gravity"
+                android:textColor="@android:color/background_light"
+                android:textIsSelectable="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Delay_bar" />
+
+            <TextView
+                android:id="@+id/Global_txt"
+                android:layout_width="0dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorPrimary"
+                android:text="  Global Delay"
+                android:textAlignment="gravity"
+                android:textColor="@android:color/background_light"
+                android:textIsSelectable="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Ontime_bar" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="38dp"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Global_bar">
+
+                <ImageButton
+                    android:id="@+id/Magnet_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/colorPrimary"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/magnet_white_24dp"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:textColor="@color/design_default_color_background"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <ImageButton
+                    android:id="@+id/Pump_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/colorPrimary"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/pump_white_24dp"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:textColor="@color/design_default_color_background" />
+
+                <ImageButton
+                    android:id="@+id/LED_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/colorPrimary"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/brightness_white_24dp"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:textColor="@color/design_default_color_background" />
+
+                <ImageButton
+                    android:id="@+id/Bluetooth_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@color/colorPrimary"
+                    android:forceHasOverlappingRendering="false"
+                    android:src="@drawable/bluetooth_white_24dp"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:tint="@color/design_default_color_error" />
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <View
+            android:id="@+id/View_selected"
+            android:layout_width="wrap_content"
+            android:layout_height="5dp"
+            android:layout_marginTop="1dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="15dp"
+            android:layout_marginTop="2dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <Button
+                android:id="@+id/choose_1"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/colorPrimary"
+                android:onClick="OnChoose"
+                android:stateListAnimator="@android:animator/fade_out"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@color/design_default_color_background" />
+
+            <Button
+                android:id="@+id/choose_2"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/colorPrimary"
+                android:onClick="OnChoose"
+                android:stateListAnimator="@android:animator/fade_out"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@color/design_default_color_background" />
+
+            <Button
+                android:id="@+id/choose_3"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/colorPrimary"
+                android:onClick="OnChoose"
+                android:stateListAnimator="@android:animator/fade_out"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@color/design_default_color_background" />
+
+            <Button
+                android:id="@+id/choose_4"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/colorPrimary"
+                android:onClick="OnChoose"
+                android:stateListAnimator="@android:animator/fade_out"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@color/design_default_color_background" />
+
+            <Button
+                android:id="@+id/choose_5"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/colorPrimary"
+                android:onClick="OnChoose"
+                android:stateListAnimator="@android:animator/fade_out"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@color/design_default_color_background" />
+
+            <Button
+                android:id="@+id/choose_6"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/colorPrimary"
+                android:onClick="OnChoose"
+                android:stateListAnimator="@android:animator/fade_out"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@color/design_default_color_background" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+            <Button
+                android:id="@+id/select_1"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="OnSelect"
+                android:stateListAnimator="@android:animator/fade_out"
+                android:text="1"
+                android:background="@color/colorPrimary"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@color/design_default_color_background" />
+
+            <Button
+                android:id="@+id/select_2"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/colorPrimary"
+                android:onClick="OnSelect"
+                android:stateListAnimator="@android:animator/fade_out"
+                android:text="2"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@color/design_default_color_background" />
+
+            <Button
+                android:id="@+id/select_3"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/colorPrimary"
+                android:onClick="OnSelect"
+                android:stateListAnimator="@android:animator/fade_out"
+                android:text="3"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@color/design_default_color_background" />
+
+            <Button
+                android:id="@+id/select_4"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/colorPrimary"
+                android:onClick="OnSelect"
+                android:stateListAnimator="@android:animator/fade_out"
+                android:text="4"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@color/design_default_color_background" />
+
+            <Button
+                android:id="@+id/select_5"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/colorPrimary"
+                android:onClick="OnSelect"
+                android:stateListAnimator="@android:animator/fade_out"
+                android:text="5"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@color/design_default_color_background" />
+
+            <Button
+                android:id="@+id/select_6"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/colorPrimary"
+                android:onClick="OnSelect"
+                android:stateListAnimator="@android:animator/fade_out"
+                android:text="6"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@color/design_default_color_background" />
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
