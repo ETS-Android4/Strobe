@@ -1,9 +1,21 @@
 # Strobe
-Repository contains Arduino program and Android application used for one of my physics projects. The project was a device to show stroboscopic effect on a stream of water.
+Repository contains Arduino program and Android application used for one of my physics projects in high school. The project was a device to show stroboscopic effect on a stream of water.
 Embedded (Arduino) program controls the operation of the device like colors of RGB LEDs, electromagnet, water pump. Android app provides easy to use interface to remote change parameters (frequency, colors etc.) in realtime by bluetooth.
 
-<p align="center">
-  <img width="360" src="https://github.com/Kowalski1024/Strobe/blob/main/images/img_1.jpg">
-</p>
+## Android app
+| Home | Palette |
+| - | - |
+| ![](images/app_main.png) | ![](images/app_palette.png) |
 
 ##### Android app tested only on Xiaomi mi A1
+
+## Example of effects
+| | | | |
+|-|-|-| - |
+|![](images/gif_1.gif) | ![](images/gif_3.gif) | ![](images/gif_2.gif) | ![](images/gif_4.gif) |
+
+## Board
+
+| | |
+|-|-|
+|<div style="width:400px">![](images/board_schematic.jpg)</div>  |<div style="width:400px">![](images/board.jpg)</div>  |
