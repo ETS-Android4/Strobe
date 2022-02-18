@@ -16,6 +16,6 @@ Embedded (Arduino) program controls the operation of the device like colors of R
 
 ## Board
 
-| | |
+|||
 |-|-|
-|<div style="width:400px">![](images/board_schematic.jpg)</div>  |<div style="width:400px">![](images/board.jpg)</div>  |
+|![](images/board_schematic.jpg)  |![](images/board.jpg) |
